@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 10:16:19 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/03/05 11:04:57 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/03/05 11:38:48 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,5 @@ static char	*ft_itoa(int n)
 
 int	ft_print_nbr(int n)
 {
-	int		len;
-	char	*num;
-
-	num = ft_itoa(n);
-	len = ft_print_str(num);
-	free (num);
-	return (len);
+	return (ft_print_str(ft_itoa(n)));
 }
