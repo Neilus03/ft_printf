@@ -1,12 +1,10 @@
 
 #---------------------------------------------------#
-#                   LIBFT MAKEFILE     				#
+#                   PRINTF MAKEFILE                  #
 #---------------------------------------------------#
 
 # Name of the output library
 NAME = libftprintf.a
-
-# Name of the output library for bonus
 
 # Define some color codes for pretty printing
 RED = \033[91m
@@ -24,7 +22,7 @@ CYAN = \033[96m
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror
 
 # Command to remove files
 RM = rm -f
@@ -32,11 +30,8 @@ RM = rm -f
 # Command to run norminette
 NORM = norminette -R CheckForbiddenSourceHeader .
 
-# Command to create a library archive
-AR = ar -rcs
-
 #---------------------------------------------------#
-#                   SOURCE FILES					#
+#                   SOURCE FILES                    #
 #---------------------------------------------------#
 
 # Header file
@@ -53,31 +48,31 @@ OBJ    = $(SRC:.c=.o)
 DEPS   = $(SRC:.c=.d)
 
 #---------------------------------------------------#
-#                   OBJECT FILES					#
+#                   OBJECT FILES                    #
 #---------------------------------------------------#
 
 # Rule to generate an object file from a C source file
-%.o: %.c Makefile
-	@$(CC) $(CFLAGS) -MMD -I./ -c $< -o $@
+%.o: %.c $(HEADER) Makefile
+	@$(CC) $(CFLAGS) -MMD -c $< -o $@
 	@echo "$(CYAN)Compiling: $(CYAN)$<$(DEF_CL) $(GREEN)[OK]$(DEF_CL)"
 
 #---------------------------------------------------#
-#                   MAIN TARGET   					#
+#                   MAIN TARGET                     #
 #---------------------------------------------------#
 
-# Default rule to build the main library
+# Default rule to build the static library
 all: $(NAME)
 
 # Include dependencies for all source files
 -include $(DEPS)
 
-# Rule to build the main library
+# Rule to build the static library
 $(NAME): $(OBJ)
-	@$(AR) $(NAME) $(OBJ)
-	@echo "Compilation $(GREEN) Completed ! $(DEF_CL)"
+	@ar rcs $(NAME) $(OBJ)
+	@echo "Library $(GREEN)$(NAME)$(DEF_CL) $(GREEN)[OK]$(DEF_CL)"
 
 #---------------------------------------------------#
-#                    CLEANING   					#
+#                    CLEANING                       #
 #---------------------------------------------------#
 
 # Rule to clean up object files and dependencies
@@ -87,13 +82,13 @@ clean:
 	@$(RM) $(DEPS)
 	@echo "$(CYAN)	Deleted dependencies: $(RED)$(DEPS) $(DEF_CL)"
 
-#Rule to remove the compiled library file and cleaned object files
+# Rule to remove the compiled library file and cleaned object files
 fclean: clean
 	@$(RM) $(NAME)
 	@echo "$(CYAN)	DELETED: $(RED)$(NAME)$(DEF_CL)"
 
 #---------------------------------------------------#
-#               ADDITIONAL TARGET  					#
+#               ADDITIONAL TARGET                   #
 #---------------------------------------------------#
 
 # Rule to completely rebuild the program from scratch

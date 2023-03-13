@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 14:36:02 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/03/05 11:03:45 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/03/13 10:56:11 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_print_ptr(unsigned long long ptr);
 int		ft_print_unsigned(unsigned int n);
 int		ft_formats(va_list args, const char format);
 int		ft_printf(const char *str, ...);
+//int		main(void);
 
 #endif //FT_PRINTF_H
