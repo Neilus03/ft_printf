@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 17:42:52 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/18 08:50:30 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/18 10:45:13 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,11 @@ static char	*ft_unsigned_itoa(unsigned int n)
 
 int	ft_print_unsigned(unsigned int n)
 {
-	return (ft_print_str(ft_unsigned_itoa(n)));
+	char	*str;
+	int		len;
+
+	str = ft_unsigned_itoa(n);
+	len = ft_print_str(str);
+	free(str);
+	return (len);
 }

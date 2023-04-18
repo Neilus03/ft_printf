@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 09:48:00 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/18 09:32:17 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/18 09:57:34 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
+
 #include "ft_printf.h"
 
 int	main(void)
@@ -26,6 +27,7 @@ int	main(void)
 	c = 'X';
 	ptr = &num;
 	u = 4294967295;
+	
 	ft_printf ("Print a string: %s\n", str);
 	ft_printf ("Print a decimal number: %d\n", num);
 	ft_printf ("Print a character: %c\n", c);
@@ -40,6 +42,10 @@ int	main(void)
 	ft_printf("EDGE CASE: Print a small hexadecimal number: %x\n", 241);
 	ft_printf("EDGE CASE: Print a large unsigned number: %u\n", u);
 	ft_printf("EDGE CASE: Print a small unsigned number: %u\n", 324);
+	int i;
+
+	i = ft_printf("a%c%c%c", 'a', '\t', 'b');
+	ft_printf("\n%d", i);
 	return (0);
 }
 */

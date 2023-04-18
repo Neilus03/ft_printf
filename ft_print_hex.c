@@ -6,19 +6,13 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 18:17:53 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/18 07:53:35 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/18 11:23:49 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_putchar_fd(char c, int fd)
-{
-	if (fd)
-		write (fd, &c, 1);
-}
-
-static int	ft_hexdigits(int n)
+static int	ft_hexdigits(unsigned int n)
 {
 	int	len;
 
@@ -33,33 +27,44 @@ static int	ft_hexdigits(int n)
 	return (len);
 }
 
-static void	ft_put_hex(unsigned int n, const char format)
+static void	ft_put_hex(unsigned int n, const char format, char *str, int *index)
 {
 	if (n >= 16)
 	{
-		ft_put_hex(n / 16, format);
-		ft_put_hex(n % 16, format);
+		ft_put_hex(n / 16, format, str, index);
+		ft_put_hex(n % 16, format, str, index);
 	}
 	else
 	{
 		if (n == 0)
-		{
-			write(1, "0", 1);
-		}
+			str[*index] = '0';
 		else if (n < 10)
-			ft_putchar_fd((n + '0'), 1);
+			str[*index] = n + '0';
 		else
 		{
 			if (format == 'x')
-				ft_putchar_fd((n - 10 + 'a'), 1);
+				str[*index] = (n - 10) + 'a';
 			else if (format == 'X')
-				ft_putchar_fd((n - 10 + 'A'), 1);
+				str[*index] = (n - 10) + 'A';
 		}
+		(*index)++;
 	}
 }
 
 int	ft_print_hex(unsigned int n, const char format)
 {
-	ft_put_hex(n, format);
-	return (ft_hexdigits(n));
+	char	*str;
+	int		len;
+	int		index;
+
+	len = ft_hexdigits(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	str[len] = '\0';
+	index = 0;
+	ft_put_hex(n, format, str, &index);
+	len = ft_print_str(str);
+	free(str);
+	return (len);
 }
