@@ -6,13 +6,13 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 17:42:52 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/03/13 11:00:48 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/18 08:50:30 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_unsigned_digits(int n)
+static int	ft_unsigned_digits(unsigned int n)
 {
 	int	len;
 
@@ -27,7 +27,7 @@ static int	ft_unsigned_digits(int n)
 	return (len);
 }
 
-static char	*ft_unsigned_itoa(int n)
+static char	*ft_unsigned_itoa(unsigned int n)
 {
 	char	*result;
 	int		len;

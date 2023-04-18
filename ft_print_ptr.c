@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 09:32:04 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/03/13 11:00:50 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/18 09:25:10 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static void	ft_putptr(uintptr_t n)
 
 int	ft_print_ptr(unsigned long long ptr)
 {
+	write(1, "0x", 2);
 	ft_putptr(ptr);
-	return (write(1, "0x", 2) + ft_len_ptr(ptr));
+	return (2 + ft_len_ptr(ptr));
 }
