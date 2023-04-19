@@ -1,6 +1,8 @@
 {
 	"files.associations": {
 		"stdint.h": "c",
-		"ostream": "c"
+		"ostream": "c",
+		"sstream": "c",
+		"iterator": "c"
 	}
 }

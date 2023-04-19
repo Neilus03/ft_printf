@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 18:17:53 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/18 11:23:49 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/19 08:41:05 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_print_hex(unsigned int n, const char format)
 	len = ft_hexdigits(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
-		return (0);
+		return (-1);
 	str[len] = '\0';
 	index = 0;
 	ft_put_hex(n, format, str, &index);

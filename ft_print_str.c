@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 10:18:28 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/18 10:56:44 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/19 08:48:05 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	ft_print_str(char *str)
 	if (!str)
 	{	
 		ft_putstr("(null)");
+		if (len == -1)
+			return (-1);
 		return (6);
 	}
 	while (str[len])
