@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 14:00:39 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/19 08:10:36 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:35:22 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,4 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
+/*I had to split up ft_printf function in 2 parts to not surpass 25 lines*/

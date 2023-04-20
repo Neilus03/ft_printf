@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 09:48:00 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/04/19 08:29:32 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/04/20 12:28:47 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(void)
 	c = 'X';
 	ptr = &num;
 	u = 4294967295;
-	
+	/*
 	ft_printf ("Print a string: %s\n", str);
 	ft_printf ("Print a decimal number: %d\n", num);
 	ft_printf ("Print a character: %c\n", c);
@@ -56,5 +56,20 @@ int	main(void)
     printf("Printf returned: %d\n", ret);
 	ft_printf("ft_printf returned: %d\n", ret1);
 
+
+	int ret3;
+	int ret4;
+
+	ret3 = ft_printf("%sx", "{} al$#@@@^&$$^#^@@^$*((&");
+	
+	ret4 = printf("%sx", "{} al$#@@@^&$$^#^@@^$*((&");
+	
+
+	write(1, "\n",1);
+	write(1, "\n",1);
+	printf("Printf returned: %d\n", ret3);
+	write(1, "\n",1);
+	printf("ft_printf returned: %d\n", ret4);
+	write(1, "\n",1);
 }
 */
