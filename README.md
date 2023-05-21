@@ -1,18 +1,3 @@
-
-#### Requirements:
-- Don’t implement the buffer management of the original printf().
-- Your function has to handle the following conversions: cspdiuxX%
-- Your function will be compared against the original printf().
-- You must use the command ar to create your library. Using the libtool command is forbidden.
-- Your libftprintf.a has to be created at the root of your repository
-
-
-
-
-
-
-
-
 # ft_printf
 
 ft_printf is a custom implementation of the famous `printf` function from the C Standard Library. The goal of this 42 project is to understand the intricacies of string formatting and low-level output functions by creating our own version of `printf`.
@@ -21,9 +6,11 @@ ft_printf is a custom implementation of the famous `printf` function from the C 
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation and Usage](#installation-and-usage)
+- [Introduction](#Introduction)
+- [Features](#Features)
+- [Requirements](#Requirements)
+- [Installation and Usage](#Installation-and-usage)
+
 
 
 ## Introduction
@@ -47,6 +34,13 @@ Our `ft_printf` supports the following conversions:
 - `%%`: Prints a percent sign.
 
 The function doesn't implement the buffer management of the original `printf`, and it will be compared against the original `printf` for correctness.
+
+## Requirements:
+- Don’t implement the buffer management of the original printf().
+- Your function has to handle the following conversions: cspdiuxX%
+- Your function will be compared against the original printf().
+- You must use the command ar to create your library. Using the libtool command is forbidden.
+- Your libftprintf.a has to be created at the root of your repository
 
 ## Installation and Usage
 
