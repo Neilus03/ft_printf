@@ -30,17 +30,16 @@ I have to implement the following conversions:
 
 # ft_printf
 
-ft_printf is a custom implementation of the famous `printf` function from the C Standard Library. The goal of this project is to understand the intricacies of string formatting and low-level output functions by creating our own version of `printf`.
+ft_printf is a custom implementation of the famous `printf` function from the C Standard Library. The goal of this 42 project is to understand the intricacies of string formatting and low-level output functions by creating our own version of `printf`.
 
-![Banner](https://place-hold.it/1200x600)
+![image](https://user-images.githubusercontent.com/87651732/222954845-ac588ca4-7cac-452f-88d9-042f05eee3de.png)
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation and Usage](#installation-and-usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
