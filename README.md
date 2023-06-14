@@ -51,9 +51,3 @@ git clone https://github.com/Neilus03/ft_printf.git
 cd ft_printf
 make
 ```
-This will create a libftprintf.a library file at the root of your repository. To use the ft_printf function in your code, include the ft_printf.h header file and link against the library:
-
-```
-gcc -L. -lftprintf -o your_program your_program.c
-```
-
