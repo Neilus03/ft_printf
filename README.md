@@ -47,7 +47,7 @@ The function doesn't implement the buffer management of the original `printf`, a
 To use `ft_printf`, clone the repository and compile it:
 
 ```bash
-git clone https://github.com/Neilus03/ft_printf.git
+git clone https://github.com/Neilus03/ft_printf.git ft_printf
 cd ft_printf
 make
 ```
