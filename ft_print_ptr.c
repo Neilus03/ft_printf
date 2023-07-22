@@ -15,7 +15,7 @@
 static void	ft_putchar_fd(char c, int fd, int *err)
 {
 	if (fd)
-	{	
+	{
 		if (write(fd, &c, 1) == -1)
 			*err = -1;
 	}
@@ -39,7 +39,7 @@ static int	ft_len_ptr(uintptr_t n)
 static void	ft_putptr(uintptr_t n, int *err)
 {
 	if (n >= 16)
-	{	
+	{
 		ft_putptr(n / 16, err);
 		ft_putptr(n % 16, err);
 	}
